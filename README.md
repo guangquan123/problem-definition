@@ -1,14 +1,18 @@
-# Problem Framing Skill —— 界定问题思维模型
+# problem-definition —— 界定问题思维模型
 
 把"我觉得不对"还原成"到底发生了什么"。
 
-一个可安装到 AI Agent（DeepWorks / OpenCode / Claude Code 等兼容 SKILL.md 格式的工具）的技能：把《如何界定问题思维模型》的方法论变成 AI 可以直接执行的工具箱。
+一个可安装到 AI Agent 的技能（Skill）：把《如何界定问题思维模型》的方法论变成 AI 可以直接执行的工具箱。标准 `SKILL.md` 格式（Agent Skills 开放标准），DeepWorks / OpenCode / Claude Code 等兼容工具均可加载。
 
-## 它能做什么
+## 它解决什么问题
 
-当你说"帮我界定一下这个问题""筛一下这条信息里哪些是真的""怎么跟领导汇报这件事"时，AI 会按经过实战验证的方法陪你走完问题界定，而不是直接跳去给方案。
+大多数问题解决不了，不是缺努力，是问题本身没界定对：把感受当事实、把评价当信息、把模糊当共识。装上这个 skill 后，AI 不会急着给方案，而是先陪你把问题界定清楚：
 
-**工具箱：八个方法**
+- 你说"帮我梳理这个问题" → 按六步完整流程走
+- 你说"筛一下这条信息里哪些是真的" → 单独调用筛事实方法
+- 你说"这事怎么跟领导说" → 按向上沟通模块组织汇报（含追问预案）
+
+## 工具箱：八个方法
 
 | # | 方法 | 干什么用 |
 |-|-|-|
@@ -31,7 +35,7 @@
 
 ## 安装
 
-**全局安装**（所有工作区可用）：
+**DeepWorks / OpenCode / `~/.agents/skills` 生态**（全局，所有工作区可用）：
 
 ```bash
 git clone https://github.com/guangquan123/problem-definition ~/.agents/skills/problem-definition
@@ -43,21 +47,27 @@ git clone https://github.com/guangquan123/problem-definition ~/.agents/skills/pr
 git clone https://github.com/guangquan123/problem-definition .opencode/skills/problem-definition
 ```
 
-DeepWorks 用户在技能面板重载后即可使用；其他兼容 SKILL.md 的 Agent 按各自机制加载。
+**Claude Code**（个人技能目录）：
+
+```bash
+git clone https://github.com/guangquan123/problem-definition ~/.claude/skills/problem-definition
+```
+
+其他任何读取 `SKILL.md` 的 Agent，把本仓库放进它的 skills 目录即可。
 
 ## 使用示例
 
 ```
-# 完整界定
+# 完整界定（六步全流程）
 "帮我把我这个问题完整梳理清楚：项目推进特别慢，感觉大家都不配合。"
 
-# 单点取用
+# 单点取用（点到哪个工具用哪个）
 "帮我筛一下这条转述：'听说小王开会又迟到半小时，明显不重视项目。'"
 
-# AI 推荐模式
+# AI 推荐（丢段模糊描述，AI 判断从哪切入）
 "最近团队氛围很怪，我说不上来哪里不对。"
 
-# 向上沟通
+# 向上沟通（方法⑧）
 "硬件延期到货这个事，帮我给领导同步清楚。"
 ```
 
@@ -73,13 +83,25 @@ problem-definition/
     └── report-template.md      # 导出报告模板
 ```
 
+## 姊妹篇：problem-analysis
+
+本 skill 与 [problem-analysis](https://github.com/guangquan123/problem-analysis) 同源一个方法系列，各管问题解决的第一段：
+
+| | problem-definition（本仓库） | problem-analysis |
+|-|-|-|
+| 管哪一段 | 界定：还原事实、锁定真问题 | 分析：拆解、验证、决策、汇报 |
+| 典型的一句话 | "这个问题到底出在哪？哪些信息是真的？" | "帮我系统分析一下，先做哪个？" |
+| 方法密度 | 8 个方法，轻量，单点可取用 | 16 场景 × 16 模型，四步流程 |
+
+可独立使用，也可接力：先界定锁对问题，再分析拆解到底。
+
 ## 方法论来源
 
 核心方法来自飞书文档《如何界定问题思维模型》（问题界定卡、三类分型、评价词转写、七类加工痕迹、核验三问、5Why 停止规则、反证三问、决策句改写），经真实场景两轮实战复盘迭代后沉淀（问题界定 → 向上汇报 → 追问预案全链路），并做了通用化重构（工具箱化、多场景适配）。
 
 ## 维护
 
-本仓库持续维护：方法规则的新增、实战验证后的迭代都会同步到这里。
+持续维护中。发现问题或想加方法：[提 Issue](https://github.com/guangquan123/problem-definition/issues)。
 
 ## License
 
