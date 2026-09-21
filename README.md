@@ -34,13 +34,13 @@
 **全局安装**（所有工作区可用）：
 
 ```bash
-git clone https://github.com/guangquan123/problem-framing ~/.agents/skills/problem-framing
+git clone https://github.com/guangquan123/problem-analysis-models ~/.agents/skills/problem-framing
 ```
 
 **项目级安装**（仅当前项目）：
 
 ```bash
-git clone https://github.com/guangquan123/problem-framing .opencode/skills/problem-framing
+git clone https://github.com/guangquan123/problem-analysis-models .opencode/skills/problem-framing
 ```
 
 DeepWorks 用户在技能面板重载后即可使用；其他兼容 SKILL.md 的 Agent 按各自机制加载。
