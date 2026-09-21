@@ -1,5 +1,5 @@
 ---
-name: problem-framing
+name: problem-definition
 description: |
   界定问题的思维模型工具箱。八个方法可单独取用也可组合成完整流程：问题分型（发生型/潜在型/理想型）、感受还原成事实、筛信息中的事实、5W2H 补边界、5 Why 追原因、查隐含假设找反证、目标-现状-差距收束、向上沟通。缺数据标"待确认"绝不编造，推测一律标"待核实"。默认轻量单点响应，不强制走完整流程。
 
@@ -145,7 +145,7 @@ What（发生了什么）/ Who（涉及谁）/ When（何时）/ Where（哪个�
 
 ## 导出报告
 
-用户要求导出时，按 `templates/report-template.md` 结构生成，保存到 `outputs/problem-framing-<主题>-<YYYYMMDD>.md`（主题 2-6 字）。未要求不生成文件。
+用户要求导出时，按 `templates/report-template.md` 结构生成，保存到 `outputs/problem-definition-<主题>-<YYYYMMDD>.md`（主题 2-6 字）。未要求不生成文件。
 
 ## 示例（四种典型用法）
 

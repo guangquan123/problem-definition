@@ -34,13 +34,13 @@
 **全局安装**（所有工作区可用）：
 
 ```bash
-git clone https://github.com/guangquan123/problem-framing ~/.agents/skills/problem-framing
+git clone https://github.com/guangquan123/problem-definition ~/.agents/skills/problem-definition
 ```
 
 **项目级安装**（仅当前项目）：
 
 ```bash
-git clone https://github.com/guangquan123/problem-framing .opencode/skills/problem-framing
+git clone https://github.com/guangquan123/problem-definition .opencode/skills/problem-definition
 ```
 
 DeepWorks 用户在技能面板重载后即可使用；其他兼容 SKILL.md 的 Agent 按各自机制加载。
@@ -64,7 +64,7 @@ DeepWorks 用户在技能面板重载后即可使用；其他兼容 SKILL.md 的
 ## 目录结构
 
 ```
-problem-framing/
+problem-definition/
 ├── SKILL.md                    # 主指令：使用模式、八个方法、完整流程
 ├── references/
 │   ├── fact-filtering.md       # 筛事实四步法（处理别人发来的信息）
